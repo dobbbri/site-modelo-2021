@@ -5,7 +5,7 @@
     <li v-for="(item, indice) in menu" :key="indice" class="py-2">
       <router-link
         :to="{ path: item.path, hash: item.anchor }"
-        class="text-gray-900 mx-3 py-2 mb-3 border-b-2 border-transparent hover:border-gray-900 uppercase text-sm font-bold"
+        class="text-gray-900 py-2 mb-3 md:mx-3 md:mb-0 border-b-2 border-transparent hover:border-gray-900 uppercase text-sm font-bold"
         aria-current="page"
       >
         {{ item.title }}

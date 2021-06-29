@@ -5,11 +5,7 @@
         <div class="flex items-stretch w-full">
           <!-- logo -->
           <div class="flex-shrink-0 flex items-center justify-start">
-            <img
-              class="h-8 w-auto"
-              src="../assets/svg/logo.svg"
-              alt="Workflow"
-            />
+            <icon name="logo" class="h-8 w-36" />
           </div>
 
           <!-- menu -->
