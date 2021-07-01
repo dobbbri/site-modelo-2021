@@ -1,10 +1,26 @@
-import { createStore } from 'vuex'
-import user from '../store/modules/user'
+import { reactive, readonly } from 'vue'
 
-const store = createStore({
-  modules: {
-    user,
-  },
+const state = reactive({
+  menu: false
 })
 
-export default store
+const methods = {
+  toggleMenu() {
+    state.menu = !state.menu
+  },
+  closeMenu() {
+    state.menu = false
+  }
+}
+
+const getters = {
+  menuState() {
+    return state.menu
+  }
+}
+
+export default {
+  state: readonly(state),
+  methods,
+  getters
+}

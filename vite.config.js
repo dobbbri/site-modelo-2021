@@ -6,13 +6,18 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  hmr: false,
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '/src')
+    }
+  },
+  // hmr: { overlay: false },
   plugins: [
     vue(),
     ViteComponents(),
     viteSvgIcons({
       iconDirs: [path.resolve(process.cwd(), 'src/assets/svg')],
-      symbolId: 'svg-[dir]-[name]',
-    }),
-  ],
+      symbolId: 'svg-[dir]-[name]'
+    })
+  ]
 })

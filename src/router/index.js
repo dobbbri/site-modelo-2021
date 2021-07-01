@@ -1,15 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '/src/components/Home.vue'
-import NotFound from '/src/components/NotFound.vue'
+import Home from '/src/views/Home.vue'
+import NotFound from '/src/views/NotFound.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home },
-  { path: '/:path(.*)', component: NotFound },
+  { path: '/:path(.*)', component: NotFound }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes
 })
 
 const scrollBehavior = function (to, from, savedPosition) {

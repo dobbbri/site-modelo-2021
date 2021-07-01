@@ -12,12 +12,12 @@ import {
   watch,
   onMounted,
   onUpdated,
-  onUnmounted,
+  onUnmounted
 } from 'vue'
 
 export default {
   props: {
-    name: String,
+    name: String
   },
 
   setup(name) {
@@ -63,8 +63,8 @@ export default {
       readersNumber,
       book,
       matchingNames,
-      toggle,
+      toggle
     }
-  },
+  }
 }
 </script>

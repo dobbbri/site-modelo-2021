@@ -11,13 +11,13 @@ export default {
   props: {
     name: {
       type: String,
-      required: true,
-    },
+      required: true
+    }
   },
 
   setup(props) {
     const symbolId = computed(() => `#svg-${props.name}`)
     return { symbolId }
-  },
+  }
 }
 </script>
