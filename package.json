@@ -4,17 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "ct": "cz"
-  },
-  "husky": {
-    "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{ts,vue}": "eslint --fix"
+    "preview": "vite preview"
   },
   "dependencies": {
     "vue": "^3.0.7",
@@ -29,11 +19,10 @@
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-vue": "^7.9.0",
-    "husky": "^6.0.0",
     "postcss": "^8.2.15",
     "prettier": "2.2.0",
     "tailwindcss": "^2.1.2",
-    "vite": "^2.3.2",
+    "vite": "^2.3.8",
     "vite-plugin-components": "^0.11.2",
     "vite-plugin-svg-icons": "^1.0.0"
   },
