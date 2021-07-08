@@ -16,7 +16,7 @@ export default {
   },
 
   setup(props) {
-    const symbolId = computed(() => `#svg-${props.name}`)
+    const symbolId = computed(() => `#icon-${props.name}`)
     return { symbolId }
   }
 }

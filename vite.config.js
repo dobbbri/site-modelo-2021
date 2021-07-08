@@ -16,8 +16,8 @@ export default defineConfig({
     vue(),
     ViteComponents(),
     viteSvgIcons({
-      iconDirs: [path.resolve(process.cwd(), 'src/assets/svg')],
-      symbolId: 'svg-[dir]-[name]'
+      iconDirs: [path.resolve(process.cwd(), 'src/assets/icons')],
+      symbolId: 'icon-[dir]-[name]'
     })
   ]
 })

@@ -1,7 +1,7 @@
 <template>
   <div class="font-sans antialiased leading-normal tracking-normal font-normal">
     <div class="relative min-h-screen text-gray-900 bg-white overflow-x-hidden">
-      <Sidebar :menu="menu" class="relative" />
+      <Sidebar :menu="menu" />
       <div
         class="relative"
         :class="[store.getters.menuState() ? 'openMenu' : 'closeMenu']"
