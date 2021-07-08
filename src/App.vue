@@ -11,14 +11,14 @@
 </template>
 
 <script>
-import { provide, ref } from 'vue'
+import { provide, reactive } from 'vue'
 import store from './store'
 
 export default {
   setup() {
     provide('store', store)
 
-    const menu = ref([
+    const menu = reactive([
       { title: 'Início', path: '/', anchor: '#init' },
       { title: 'Áreas de Atuação', path: '/', anchor: '#expertise' },
       { title: 'Equipe', path: '/', anchor: '#team' },
