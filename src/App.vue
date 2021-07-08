@@ -2,12 +2,9 @@
   <div class="font-sans antialiased leading-normal tracking-normal font-normal">
     <div class="relative min-h-screen text-gray-900 bg-white overflow-x-hidden">
       <Sidebar :menu="menu" />
-      <div
-        class="relative"
-        :class="[store.getters.menuState() ? 'openMenu' : 'closeMenu']"
-      >
+      <div :class="[store.getters.menuState() ? 'openedMenu' : 'closedMenu']">
         <Navbar :menu="menu" />
-        <router-view />
+        <Home />
       </div>
     </div>
   </div>
@@ -15,7 +12,7 @@
 
 <script>
 import { provide, ref } from 'vue'
-import store from '@/store'
+import store from './store'
 
 export default {
   setup() {
@@ -38,11 +35,11 @@ export default {
 </script>
 
 <style scoped>
-.openMenu {
+.openedMenu {
   transform: translate3d(-250px, 0, 0);
   transition: transform 0.4s ease;
 }
-.closeMenu {
+.closedMenu {
   transform: translate3d(0, 0, 0);
   transition: transform 0.4s ease;
 }

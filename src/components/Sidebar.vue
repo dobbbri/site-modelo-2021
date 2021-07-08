@@ -1,16 +1,6 @@
 <template>
   <div
-    class="
-      w-[250px]
-      md:w-[350px]
-      px-4
-      h-full
-      bg-gray-800
-      fixed
-      inset-y-0
-      right-0
-      left-auto
-    "
+    class="w-[250px] md:w-[350px] px-4 h-full bg-gray-800 fixed inset-y-0 right-0 left-auto"
   >
     <div class="h-16 mb-5 flex items-center">
       <MenuButton :icon-name="'close'" @click="store.methods.toggleMenu()" />
@@ -38,20 +28,20 @@
 </template>
 
 <script>
-import { inject } from 'vue'
+import { inject } from "vue";
 
 export default {
   props: {
     menu: {
       type: Array,
-      required: true
-    }
+      required: true,
+    },
   },
 
   setup() {
-    const store = inject('store')
+    const store = inject("store");
 
-    return { store }
-  }
-}
+    return { store };
+  },
+};
 </script>

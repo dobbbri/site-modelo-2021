@@ -3,10 +3,10 @@ module.exports = {
   tabWidth: 2,
   useTabs: false,
   printWidth: 80,
-  endOfLine: 'auto',
   singleQuote: true,
-  trailingComma: 'none',
   bracketSpacing: true,
+  trailingComma: 'none',
   arrowParens: 'always',
-  htmlWhitespaceSensitivity: 'ignore'
+  htmlWhitespaceSensitivity: 'ignore',
+  embeddedLanguageFormatting: 'off'
 }
