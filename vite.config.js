@@ -6,6 +6,11 @@ import path from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, '/src')
+    }
+  },
   // hmr: { overlay: false },
   plugins: [
     vue(),

@@ -1,20 +1,23 @@
 {
+  "name": "starter-template",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.0.5"
+    "vue": "^3.0.7",
+    "vue-router": "^4.0.8"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.4",
-    "@vue/compiler-sfc": "^3.0.5",
-    "vite": "^2.4.0",
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/compiler-sfc": "^3.0.7",
     "autoprefixer": "^10.2.5",
     "postcss": "^8.2.15",
+    "prettier": "^2.3.2",
     "tailwindcss": "^2.1.2",
+    "vite": "^2.3.8",
     "vite-plugin-components": "^0.11.2",
     "vite-plugin-svg-icons": "^1.0.0"
   }

@@ -40,7 +40,7 @@ export default {
       return names.value.filter((name) => name.includes(search.value))
     })
 
-    watch(search, () => {
+  watch(search, () => {
       console.log('search is updated')
     })
 
