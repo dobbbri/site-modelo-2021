@@ -3,7 +3,7 @@
     class="w-[250px] md:w-[350px] px-4 h-full bg-gray-800 fixed inset-y-0 right-0 left-auto"
   >
     <div class="h-16 mb-5 flex items-center">
-      <MenuButton :icon-name="'close'" @click="store.methods.toggleMenu()" />
+      <MenuToggler :icon-name="'close'" @click="store.methods.toggleMenu()" />
     </div>
     <ul class="text-sm text-gray-200 uppercase leading-5">
       <li
@@ -12,7 +12,7 @@
         class="border-t border-gray-600 first:border-none"
       >
         <router-link
-          :to="{ path: item.path, hash: item.anchor }"
+          :to="item.path"
           class="block py-6 hover:font-bold hover:text-white tracking-tighter"
           aria-current="page"
           @click="store.methods.closeMenu()"
@@ -28,20 +28,20 @@
 </template>
 
 <script>
-import { inject } from "vue";
+import { inject } from 'vue'
 
 export default {
   props: {
     menu: {
       type: Array,
-      required: true,
-    },
+      required: true
+    }
   },
 
   setup() {
-    const store = inject("store");
+    const store = inject('store')
 
-    return { store };
-  },
-};
+    return { store }
+  }
+}
 </script>

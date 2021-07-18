@@ -1,5 +1,8 @@
 <template>
-  <div class="font-sans antialiased leading-normal tracking-normal font-normal">
+  <div
+    id="init"
+    class="font-sans antialiased leading-normal tracking-normal font-normal"
+  >
     <div class="relative min-h-screen text-gray-900 bg-white overflow-x-hidden">
       <Sidebar :menu="menu" />
       <Navbar
@@ -23,11 +26,11 @@ export default {
     provide('store', store)
 
     const menu = ref([
-      { title: 'Início', path: '/', anchor: '#init' },
-      { title: 'Áreas de Atuação', path: '/', anchor: '#expertise' },
-      { title: 'Equipe', path: '/', anchor: '#team' },
-      { title: 'Blog e Notícias', path: '/', anchor: '#blog' },
-      { title: 'Contato', path: '/', anchor: '#contact' }
+      { title: 'Início', path: '/#init' },
+      { title: 'Áreas de Atuação', path: '/#expertise' },
+      { title: 'Equipe', path: '/#team' },
+      { title: 'Blog e Notícias', path: '/#blog' },
+      { title: 'Contato', path: '/#contact' }
     ])
 
     const scrollY = ref(0)
@@ -35,15 +38,18 @@ export default {
     const fixedMenu = ref(false)
 
     onMounted(() => {
-      window.addEventListener('scroll', () => scrollY.value = Math.round(window.scrollY))
+      window.addEventListener(
+        'scroll',
+        () => (scrollY.value = Math.round(window.scrollY))
+      )
     })
 
     onUnmounted(() => {
-      window.removeEventListener('scroll', () => scrollY.value = 0)
+      window.removeEventListener('scroll', () => (scrollY.value = 0))
     })
 
     watch(scrollY, (newValue) => {
-    fixedMenu.value = (newValue > fixMenuInPosition.value) ? true : false
+      fixedMenu.value = newValue > fixMenuInPosition.value ? true : false
     })
 
     return {

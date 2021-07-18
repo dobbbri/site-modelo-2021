@@ -19,7 +19,7 @@
               >
                 <li v-for="(item, index) in menu" :key="index" class="py-2">
                   <router-link
-                    :to="{ path: item.path, hash: item.anchor }"
+                    :to="item.path"
                     class="font-bold text-gray-500 mb-3 md:mx-3 md:mb-0 py-4 hover:text-gray-900 tracking-tighter uppercase text-sm"
                     aria-current="page"
                   >
@@ -31,7 +31,7 @@
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
             <!-- Mobile menu button-->
-            <MenuButton
+            <MenuToggler
               :icon-name="'menu'"
               @click="store.methods.toggleMenu()"
             />

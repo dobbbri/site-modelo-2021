@@ -1,40 +1,21 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '/src/views/Home.vue'
-import NotFound from '/src/views/NotFound.vue'
+
+const Home = () => import('@/pages/index.vue')
+const NotFound = () => import('@/pages/not-found.vue')
 
 const routes = [
-  { path: '/', name: 'Home', component: Home },
+  { path: '/', component: Home },
   { path: '/:path(.*)', component: NotFound }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
-})
-
-const scrollBehavior = function (to, from, savedPosition) {
-  if (savedPosition) {
-    return savedPosition
-  } else {
-    const position = {}
-    if (to.hash) {
-      position.selector = to.hash
-      if (/^#\d/.test(to.hash) || document.querySelector(to.hash)) {
-        return position
-      }
-      return false
-    }
-
-    return new Promise((resolve) => {
-      if (to.matched.some((m) => m.meta.scrollToTop)) {
-        position.x = 0
-        position.y = 0
-      }
-      this.app.$root.$once('triggerScroll', () => {
-        resolve(position)
-      })
-    })
+  routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) return savedPosition
+    if (to.hash) return { el: to.hash }
+    return { x: 0, y: 0 }
   }
-}
+})
 
 export default router
