@@ -4,9 +4,8 @@
     class="font-sans antialiased leading-normal tracking-normal font-normal"
   >
     <div class="relative min-h-screen text-gray-900 bg-white overflow-x-hidden">
-      <Sidebar :menu="menu" />
+      <Sidebar />
       <Navbar
-        :menu="menu"
         :fixed-menu="fixedMenu"
         :class="[store.getters.menuState() ? 'openedMenu' : 'closedMenu']"
       />
@@ -27,14 +26,6 @@ import store from '@/store'
 export default {
   setup() {
     provide('store', store)
-
-    const menu = ref([
-      { title: 'Início', path: '/#init' },
-      { title: 'Áreas de Atuação', path: '/#expertise' },
-      { title: 'Equipe', path: '/#team' },
-      { title: 'Blog e Notícias', path: '/#blog' },
-      { title: 'Contato', path: '/#contact' }
-    ])
 
     const scrollY = ref(0)
     const fixMenuInPosition = ref(100)
@@ -57,7 +48,6 @@ export default {
 
     return {
       store,
-      menu,
       fixedMenu
     }
   }

@@ -9,7 +9,7 @@
           <div class="flex items-stretch w-full">
             <!-- logo -->
             <div class="flex-shrink-0 flex items-center justify-start">
-              <Icon name="logo" class="h-8 w-36" />
+              <Icon name="logo" class="h-8 w-36 text-black" />
             </div>
 
             <!-- menu -->
@@ -17,7 +17,11 @@
               <ul
                 class="px-2 pt-2 pb-3 space-y-1 md:flex md:items-center md:p-0 xl:space-x-7"
               >
-                <li v-for="(item, index) in menu" :key="index" class="py-2">
+                <li
+                  v-for="(item, index) in store.getters.itemsState()"
+                  :key="index"
+                  class="py-2"
+                >
                   <router-link
                     :to="item.path"
                     class="font-bold text-gray-500 mb-3 md:mx-3 md:mb-0 py-4 hover:text-gray-900 tracking-tighter uppercase text-sm"
@@ -47,11 +51,6 @@ import { inject } from 'vue'
 
 export default {
   props: {
-    menu: {
-      type: Array,
-      required: true,
-      default: () => [{ title: '', path: '/' }]
-    },
     fixedMenu: {
       type: Boolean,
       required: true
