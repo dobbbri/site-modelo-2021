@@ -49,7 +49,8 @@ export default {
   props: {
     menu: {
       type: Array,
-      required: true
+      required: true,
+      default: () => [{ title: '', path: '/' }]
     },
     fixedMenu: {
       type: Boolean,
