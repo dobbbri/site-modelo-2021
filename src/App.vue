@@ -13,6 +13,9 @@
       <div :class="[store.getters.menuState() ? 'openedMenu' : 'closedMenu']">
         <router-view />
       </div>
+      <Footer
+        :class="[store.getters.menuState() ? 'openedMenu' : 'closedMenu']"
+      />
     </div>
   </div>
 </template>
