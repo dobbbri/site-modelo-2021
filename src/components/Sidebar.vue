@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-[250px] md:w-[350px] px-4 h-full bg-gray-800 fixed inset-y-0 right-0 left-auto"
+    class="w-[300px] block px-4 h-full bg-gradient-to-r from-gray-900 to-gray-800 fixed inset-y-0 right-0 left-auto"
   >
     <div class="h-16 mb-5 flex items-center">
       <MenuToggler :icon-name="'close'" @click="store.methods.toggleMenu()" />
@@ -21,10 +21,8 @@
         </router-link>
       </li>
     </ul>
-    <div class="absolute inset-x-4 bottom-4 text-gray-100 text-center">
-      <span
-        class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start"
-      >
+    <div class="absolute inset-x-4 bottom-2 text-gray-100">
+      <div class="inline-flex justify-center w-full">
         <a class="text-gray-500">
           <Icon name="facebook" class="h-6 w-6" />
         </a>
@@ -37,7 +35,7 @@
         <a class="ml-3 text-gray-500">
           <Icon name="whatsapp" class="h-6 w-6" />
         </a>
-      </span>
+      </div>
     </div>
   </div>
 </template>

@@ -1,5 +1,7 @@
 <template>
-  <footer class="text-gray-200 bg-gray-900 body-font">
+  <footer
+    class="text-gray-200 bg-gradient-to-r from-gray-900 to-gray-800 body-font"
+  >
     <div
       class="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col"
     >
@@ -18,20 +20,20 @@
           >
             CATEGORIES
           </h2>
-          <nav class="list-none mb-10">
+          <ul class="list-none mb-10">
             <li>
-              <a class="text-gray-500 hover:text-gray-100">First Link</a>
+              <a class="text-gray-500 hover:text-orange-600">First Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Second Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Second Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Third Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Third Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Fourth Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Fourth Link</a>
             </li>
-          </nav>
+          </ul>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2
@@ -39,20 +41,20 @@
           >
             CATEGORIES
           </h2>
-          <nav class="list-none mb-10">
+          <ul class="list-none mb-10">
             <li>
-              <a class="text-gray-500 hover:text-gray-100">First Link</a>
+              <a class="text-gray-500 hover:text-orange-600">First Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Second Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Second Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Third Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Third Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Fourth Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Fourth Link</a>
             </li>
-          </nav>
+          </ul>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2
@@ -60,20 +62,20 @@
           >
             CATEGORIES
           </h2>
-          <nav class="list-none mb-10">
+          <ul class="list-none mb-10">
             <li>
-              <a class="text-gray-500 hover:text-gray-100">First Link</a>
+              <a class="text-gray-500 hover:text-orange-600">First Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Second Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Second Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Third Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Third Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Fourth Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Fourth Link</a>
             </li>
-          </nav>
+          </ul>
         </div>
         <div class="lg:w-1/4 md:w-1/2 w-full px-4">
           <h2
@@ -81,24 +83,24 @@
           >
             CATEGORIES
           </h2>
-          <nav class="list-none mb-10">
+          <ul class="list-none mb-10">
             <li>
-              <a class="text-gray-500 hover:text-gray-100">First Link</a>
+              <a class="text-gray-500 hover:text-orange-600">First Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Second Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Second Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Third Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Third Link</a>
             </li>
             <li>
-              <a class="text-gray-500 hover:text-gray-100">Fourth Link</a>
+              <a class="text-gray-500 hover:text-orange-600">Fourth Link</a>
             </li>
-          </nav>
+          </ul>
         </div>
       </div>
     </div>
-    <div class="bg-gray-800">
+    <div class="bg-gradient-to-r from-gray-800 to-gray-900">
       <div
         class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row"
       >
