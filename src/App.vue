@@ -5,7 +5,7 @@
   >
     <div class="relative min-h-screen text-gray-900 bg-white overflow-x-hidden">
       <Sidebar />
-      <Navbar2
+      <Header
         :fixed-menu="fixedMenu"
         :class="[store.getters.menuState() ? 'openedMenu' : 'closedMenu']"
       />
