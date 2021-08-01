@@ -14,7 +14,7 @@ export default {
     iconName: {
       type: String,
       required: true,
-      default: 'menu'
+      validator: (s) => ['menu', 'close'].includes(s)
     }
   }
 }

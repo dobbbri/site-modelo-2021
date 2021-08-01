@@ -14,14 +14,8 @@
 
             <!-- menu -->
             <div class="hidden md:flex-1 md:flex md:justify-end md:ml-3">
-              <ul
-                class="px-2 pt-2 pb-3 space-y-1 md:flex md:items-center md:p-0 xl:space-x-7"
-              >
-                <li
-                  v-for="(item, index) in store.getters.itemsState()"
-                  :key="index"
-                  class="py-2"
-                >
+              <ul class="px-2 pt-2 pb-3 space-y-1 md:flex md:items-center md:p-0 xl:space-x-7">
+                <li v-for="(item, index) in store.getters.itemsState()" :key="index" class="py-2">
                   <router-link
                     :to="item.path"
                     class="font-bold text-gray-500 mb-3 md:mx-3 md:mb-0 py-4 hover:text-gray-900 tracking-tighter uppercase text-sm"
@@ -35,10 +29,7 @@
           </div>
           <div class="absolute inset-y-0 right-0 flex items-center md:hidden">
             <!-- Mobile menu button-->
-            <MenuToggler
-              :icon-name="'menu'"
-              @click="store.methods.toggleMenu()"
-            />
+            <MenuToggler :icon-name="'menu'" @click="store.methods.toggleMenu()" />
           </div>
         </div>
       </div>
@@ -59,7 +50,6 @@ export default {
 
   setup() {
     const store = inject('store')
-
     return { store }
   }
 }

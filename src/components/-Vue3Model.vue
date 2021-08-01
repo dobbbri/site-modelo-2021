@@ -1,23 +1,17 @@
+/* eslint-disable */
 <template>
   <div>{{ readersNumber }} {{ book.title }}</div>
-  <input type="text" v-model="search" />
+  <input v-model="search" type="text" />
   <div v-for="name in matchingNames" :key="name">{{ name }}</div>
 </template>
 
 <script>
-import {
-  ref,
-  reactive,
-  computed,
-  watch,
-  onMounted,
-  onUpdated,
-  onUnmounted
-} from 'vue'
+import { ref, reactive, computed, watch, onMounted, onUpdated, onUnmounted } from 'vue'
 
 export default {
   props: {
-    name: String
+    name: String,
+    default: ''
   },
 
   setup(name) {
@@ -25,15 +19,7 @@ export default {
     const readersNumber = ref(0)
     const book = reactive({ title: 'Vue 3 Guide' })
     const search = ref('')
-    const names = ref(
-      'Mario',
-      'Luigi',
-      'Yoshi',
-      'Toad',
-      'Peach',
-      'Koopa',
-      'Browser'
-    )
+    const names = ref('Mario', 'Luigi', 'Yoshi', 'Toad', 'Peach', 'Koopa', 'Browser')
     const opened = ref(false)
 
     const matchingNames = computed(() => {

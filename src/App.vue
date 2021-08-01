@@ -1,8 +1,5 @@
 <template>
-  <div
-    id="init"
-    class="font-sans antialiased leading-normal tracking-normal font-normal"
-  >
+  <div id="init" class="font-sans antialiased leading-normal tracking-normal font-normal">
     <div class="relative min-h-screen text-gray-900 bg-white overflow-x-hidden">
       <Sidebar />
       <Header
@@ -12,9 +9,7 @@
       <div :class="[store.getters.menuState() ? 'openedMenu' : 'closedMenu']">
         <router-view />
       </div>
-      <Footer
-        :class="[store.getters.menuState() ? 'openedMenu' : 'closedMenu']"
-      />
+      <Footer :class="[store.getters.menuState() ? 'openedMenu' : 'closedMenu']" />
     </div>
   </div>
 </template>
@@ -32,10 +27,7 @@ export default {
     const fixedMenu = ref(false)
 
     onMounted(() => {
-      window.addEventListener(
-        'scroll',
-        () => (scrollY.value = Math.round(window.scrollY))
-      )
+      window.addEventListener('scroll', () => (scrollY.value = Math.round(window.scrollY)))
     })
 
     onUnmounted(() => {
